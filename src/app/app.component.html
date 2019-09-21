@@ -1,4 +1,7 @@
 <div class="home">
+    <ng-container *ngFor="let language of languageList">
+        <a href="/{{language.code}}/"><button class="button">{{language.label}}</button></a>
+    </ng-container>
     <div class="heroes">
         <div class="heroes--intro">
             <h3 i18n="site header|An introduction header for this sample@@introductionHeader">Angular Example Translation APP</h3>
