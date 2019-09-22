@@ -5,11 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "start:es": "ng serve --configuration=es",
-    "build": "ng build --prod",
+    "build": "ng build --prod --baseHref https://nahtanoj-hz.github.io/ng-translations-example/",
     "build:es": "ng build --configuration=production-es",
-    "build-locale:en": "ng build --prod --i18n-locale en --i18n-format xlf --i18n-file src/locale/messages.en.xlf --output-path=dist/en --baseHref /https://nahtanoj-hz.github.io/ng-translations-example/en/",
-    "build-locale:es": "ng build --prod --i18n-locale es --i18n-format xlf --i18n-file src/locale/messages.es.xlf --output-path=dist/es --baseHref /https://nahtanoj-hz.github.io/ng-translations-example/es/",
+    "build-locale:en": "ng build --prod --i18n-locale en --i18n-format xlf --i18n-file src/locale/messages.en.xlf --output-path=dist/en --baseHref https://nahtanoj-hz.github.io/ng-translations-example/en/",
+    "build-locale:es": "ng build --prod --i18n-locale es --i18n-format xlf --i18n-file src/locale/messages.es.xlf --output-path=dist/es --baseHref https://nahtanoj-hz.github.io/ng-translations-example/es/",
     "build-locale": "npm run build && npm run build-locale:en && npm run build-locale:es",
+    "deploy": "npm run build-locale && ngh",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -34,6 +35,7 @@
     "@angular/compiler-cli": "~8.2.7",
     "@angular/language-service": "~8.2.7",
     "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "^0.6.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
