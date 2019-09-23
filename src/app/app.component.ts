@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
         break;
       
       case 'en-US':
-        registerLocaleData(localeEs, 'en');
+        registerLocaleData(localeEn, 'en');
         this.currencySymbol = 'USD';
         break;
         
