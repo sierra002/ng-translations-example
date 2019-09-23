@@ -6,7 +6,7 @@
         <source>Angular Example Translation APP</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">7</context>
         </context-group>
         <note priority="1" from="description">An introduction header for this sample</note>
         <note priority="1" from="meaning">site header</note>
@@ -15,7 +15,7 @@
         <source>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">8</context>
         </context-group>
         <note priority="1" from="description">A description example</note>
         <note priority="1" from="meaning">site description</note>
@@ -24,7 +24,7 @@
         <source>Name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">14</context>
         </context-group>
         <note priority="1" from="description">the label for the hero name</note>
         <note priority="1" from="meaning">site hero name</note>
@@ -33,7 +33,7 @@
         <source>Id</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">18</context>
         </context-group>
         <note priority="1" from="description">the label for the hero id</note>
         <note priority="1" from="meaning">site hero id</note>
@@ -42,7 +42,7 @@
         <source>Description</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">22</context>
         </context-group>
         <note priority="1" from="description">the label for the hero description</note>
         <note priority="1" from="meaning">site hero description</note>
@@ -53,10 +53,37 @@
     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">28</context>
         </context-group>
         <note priority="1" from="description">footer sample</note>
         <note priority="1" from="meaning">site footer</note>
+      </trans-unit>
+      <trans-unit id="footerDate" datatype="html">
+        <source>Today is <x id="INTERPOLATION" equiv-text="{{today | date}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">footer date</note>
+        <note priority="1" from="meaning">date</note>
+      </trans-unit>
+      <trans-unit id="footerFullDate" datatype="html">
+        <source>Or if you prefer, <x id="INTERPOLATION" equiv-text="{{today | date:&apos;fullDate&apos;}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">footer full date</note>
+        <note priority="1" from="meaning">full date</note>
+      </trans-unit>
+      <trans-unit id="footerDateTime" datatype="html">
+        <source>The time is <x id="INTERPOLATION" equiv-text="{{today | date:&apos;h:mm a z&apos;}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">footer date time</note>
+        <note priority="1" from="meaning">date time</note>
       </trans-unit>
     </body>
   </file>

@@ -25,8 +25,14 @@
             </div>
         </div>
     </div>
-    <div class="home--footer" i18n="site footer|footer sample@@footer">
+    <div class="home--footer home--footer__right" i18n="site footer|footer sample@@footer">
         Made with <span style="color: #e25555;">&#9829;</span> by <a href="https://github.com/Nahtanoj-hz" target="_blank"> Nahtanoj-hz</a>
+    </div>
+    <div class="home--footer home--footer__left">
+        <p  i18n="date|footer date@@footerDate">Today is {{today | date}}</p>
+        <p  i18n="full date|footer full date@@footerFullDate">Or if you prefer, {{today | date:'fullDate'}}</p>
+        <p  i18n="date time|footer date time@@footerDateTime">The time is {{today | date:'h:mm a z'}}</p>
+        <p>{{value | currency:currencySymbol}}</p>
     </div>
 </div>
 <router-outlet></router-outlet>

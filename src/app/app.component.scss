@@ -144,10 +144,18 @@ $media-md: "screen and (min-width: #{$break-medium}) and (max-width: #{$break-la
   &--footer {
     position: absolute;
     bottom: 0;
-    right: 0;
+    width: 200px;
     border: 2px solid $white;
     border-radius: $border-radius;
     background-color: $heroes-list-background-color;
     padding: $base-margin;
+
+    &__left {
+      left: 0;
+    }
+    
+    &__right {
+      right: 0;
+    }
   }
 }
