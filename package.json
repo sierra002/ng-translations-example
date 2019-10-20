@@ -13,7 +13,11 @@
     "deploy": "npm run build-locale && ngh",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compile:server": "webpack --config webpack.server.config.js --progress --colors",
+    "serve:ssr": "node dist/server",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
+    "build:client-and-server-bundles": "ng build --prod && ng run translations:server:production --bundleDependencies all"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +28,11 @@
     "@angular/forms": "~8.2.7",
     "@angular/platform-browser": "~8.2.7",
     "@angular/platform-browser-dynamic": "~8.2.7",
+    "@angular/platform-server": "~8.2.7",
     "@angular/router": "~8.2.7",
+    "@nguniversal/express-engine": "^8.1.1",
+    "@nguniversal/module-map-ngfactory-loader": "8.1.1",
+    "express": "^4.15.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -36,8 +44,10 @@
     "@angular/language-service": "~8.2.7",
     "@types/node": "~8.9.4",
     "angular-cli-ghpages": "^0.6.0",
+    "ts-loader": "^5.2.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack-cli": "^3.1.0"
   }
 }
