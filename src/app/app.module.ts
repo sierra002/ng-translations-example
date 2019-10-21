@@ -5,17 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesService } from './heroes.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HeroCardComponent } from "./hero-card/hero-card.component";
+import { HeroesComponent } from "./heroes/heroes.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [HeroesService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeroCardComponent,
+        HeroesComponent
+    ],
+    imports: [
+        BrowserModule.withServerTransition({appId: 'serverApp'}),
+        AppRoutingModule,
+        HttpClientModule,
+        RouterModule
+    ],
+    providers: [HeroesService],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

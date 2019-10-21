@@ -1,0 +1,12 @@
+<div class="hero-card">
+    <div *ngIf="hero">
+        <div>
+            <img [src]="hero.picture" alt="">
+            <div>
+                <h3>Name:</h3> {{hero.name}}
+            </div>
+        </div>
+        <div> <h3>About</h3> {{hero.about}}</div>
+        <button (click)="backClicked()"> return</button>
+    </div>
+</div>
