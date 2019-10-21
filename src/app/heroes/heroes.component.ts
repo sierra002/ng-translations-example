@@ -13,8 +13,7 @@ import localeEn from "@angular/common/locales/en";
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-  title = 'translations';
-  heroes$: Observable<IHero[]>
+  heroes$: Observable<IHero[]>;
   languageList = [
     { code: 'en', label: 'English' },
     { code: 'es', label: 'Español' }
@@ -32,7 +31,6 @@ export class HeroesComponent implements OnInit {
     this.heroes$ = <Observable<IHero[]>>this.heroesService.getHeroes();
   }
   checkHero(heroId){
-    console.log('nav');
     this.router.navigate(['/hero', heroId])
   }
 

@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { IHero } from "../heroes.interface";
 import { HeroesService } from "../heroes.service";
 import { LinkCardService } from "../shared/link-card.service";
+import { map } from "rxjs/operators";
+import { zip } from "rxjs";
 
 @Component({
     selector: 'jhz-hero-card',
@@ -23,19 +25,15 @@ export class HeroCardComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.route.paramMap.subscribe(params => {
-            this.heroesService.getHeroes().subscribe((hero) => {
-                this.hero = hero.find((hero) => {
+        zip(this.route.paramMap, this.heroesService.getHeroes())
+            .pipe(map(([params, heroes]) => {
+                return heroes.find((hero) => {
                     return hero.id === params.get('hero')
                 }) || {};
-                this.linkCardService.setMetaTags(this.hero.name, this.hero.about, this.hero.squarePic || this.hero.picture)
-            })
+            })).subscribe((hero) => {
+            this.hero = hero;
+            this.linkCardService.setMetaTags(this.hero.name, this.hero.about, this.hero.squarePic || this.hero.picture)
         });
-
-        this.route.queryParamMap.subscribe(queryParams => {
-            queryParams.get('hero')
-        });
-
         console.log('heroCardComponent');
     }
 

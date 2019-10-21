@@ -24,16 +24,6 @@ export class AppComponent implements OnInit {
         const description = 'Angular Heroes app';
         const image = 'https://as.com/meristation/imagenes/2019/04/16/noticias/1555431500_663853_1555431594_noticia_normal.jpg';
         this.linkCardService.setMetaTags(title, description, image);
-        /*<meta property="og:title" content="When Great Minds Don’t Think Alike"/>
-        <meta property="og:description" content="How much does culture influence creative thinking?"/>
-        <meta property="og:image"
-        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"/>
-        <meta property="fb:app_id" content="195961047636152"/>
-
-        <meta property="twitter:title" content="Cristian es un puto">
-        <meta property="twitter:description" content="Tres tristes cristian">
-        <meta property="twitter:image" content="https://www.ozoneheroes.org/assets/img/ironmanclipped.png">
-        <meta property="twitter:card" content="summary">*/
     }
 
 }
