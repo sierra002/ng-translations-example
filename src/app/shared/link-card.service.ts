@@ -16,7 +16,7 @@ export class LinkCardService {
         this.meta.updateTag({name: "og:description", property: "og:description", content: description});
         this.meta.updateTag({name: "og:image", property: "og:image", content: image});
 
-        this.meta.updateTag({name: "fb:app_id", content: '195961047636152'});
+        this.meta.updateTag({property: "fb:app_id", content: '195961047636152'});
 
         this.meta.updateTag({name: "twitter:title", content: title});
         this.meta.updateTag({name: "twitter:description", content: description});
